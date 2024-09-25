@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciqsa5uwivqfa"]
+
+[ext_resource type="FontFile" uid="uid://cxohxq83pa1nr" path="res://fonts/ARCADECLASSIC.TTF" id="1_ciamu"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="ScorePlayer1Label" type="Label" parent="."]
+offset_left = 34.0
+offset_top = 16.0
+offset_right = 82.0
+offset_bottom = 41.0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ciamu")
+theme_override_font_sizes/font_size = 24
+text = "1 UP"
+
+[node name="ScorePlayer1LabelValue" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 41.0
+offset_right = 109.0
+offset_bottom = 66.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ciamu")
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="."]
+offset_left = 337.0
+offset_top = 19.0
+offset_right = 457.0
+offset_bottom = 44.0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ciamu")
+theme_override_font_sizes/font_size = 24
+text = "HIGH SCORE"
+
+[node name="HighScoreLabelValue" type="Label" parent="."]
+offset_left = 342.0
+offset_top = 44.0
+offset_right = 449.0
+offset_bottom = 69.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ciamu")
+theme_override_font_sizes/font_size = 24
+text = "5000	"
+horizontal_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="."]
+offset_left = 708.0
+offset_top = 25.0
+offset_right = 779.0
+offset_bottom = 59.0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ciamu")
+theme_override_font_sizes/font_size = 24
+text = "LEVEL"
+
+[node name="LevelLabelValue" type="Label" parent="."]
+offset_left = 710.0
+offset_top = 53.0
+offset_right = 769.0
+offset_bottom = 87.0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_ciamu")
+theme_override_font_sizes/font_size = 24
+text = "1	"
+horizontal_alignment = 1

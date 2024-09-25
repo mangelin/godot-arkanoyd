@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://jwgwoingy1r5"]
+
+[ext_resource type="Texture2D" uid="uid://h66b1mi3cruc" path="res://assets/levels/wall-corner-left.png" id="1_nk11t"]
+
+[node name="Wall-LC" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nk11t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-9, 31, -9, -8, 32, -8, 32, -11, -11, -11, -11, 32, -9, 32)

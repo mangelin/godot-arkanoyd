@@ -1,0 +1,219 @@
+[gd_scene load_steps=12 format=3 uid="uid://bg8ubs6j2trgw"]
+
+[ext_resource type="PackedScene" uid="uid://brkcvt6j2nf01" path="res://Scenes/player.tscn" id="1_4nmui"]
+[ext_resource type="Texture2D" uid="uid://bcidqa7ee8w30" path="res://assets/textures/black-64x64.png" id="1_36hdj"]
+[ext_resource type="PackedScene" uid="uid://cfuxkblvuo0q6" path="res://Scenes/ball.tscn" id="2_5vbkp"]
+[ext_resource type="PackedScene" uid="uid://jwgwoingy1r5" path="res://Scenes/left_corner.tscn" id="3_eq5iv"]
+[ext_resource type="PackedScene" uid="uid://bdqalx7xgv4p5" path="res://Scenes/block.tscn" id="4_3imka"]
+[ext_resource type="PackedScene" uid="uid://cbd02u7b8d6y2" path="res://Scenes/wall_rc.tscn" id="5_3qeig"]
+[ext_resource type="PackedScene" uid="uid://d2odcl2rcm74g" path="res://Scenes/wall_up.tscn" id="6_nfp2q"]
+[ext_resource type="PackedScene" uid="uid://dvuav6jsuqfg7" path="res://Scenes/wall_l.tscn" id="7_ky8sy"]
+[ext_resource type="PackedScene" uid="uid://ctw2rpmxsw6ol" path="res://Scenes/wall_r.tscn" id="8_qyyv2"]
+[ext_resource type="PackedScene" uid="uid://ciqsa5uwivqfa" path="res://Scenes/hud.tscn" id="9_tajqb"]
+[ext_resource type="PackedScene" uid="uid://pj51drmlfipp" path="res://Scenes/game_manager.tscn" id="11_k8kaw"]
+
+[node name="Level1" type="Node2D"]
+position = Vector2(0, 82)
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+offset_top = -79.0
+offset_right = 774.0
+offset_bottom = 941.0
+texture = ExtResource("1_36hdj")
+
+[node name="Player" parent="." instance=ExtResource("1_4nmui")]
+position = Vector2(401, 866)
+
+[node name="Ball" parent="." instance=ExtResource("2_5vbkp")]
+position = Vector2(408, 394)
+speed = 250
+
+[node name="Blocks" type="Node" parent="."]
+
+[node name="Block" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(88, 139)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(154, 139)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(220, 139)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(286, 139)
+
+[node name="Block5" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(353, 139)
+
+[node name="Block6" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(419, 139)
+
+[node name="Block7" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(485, 139)
+
+[node name="Block8" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(551, 139)
+
+[node name="Block9" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(617, 139)
+
+[node name="Block10" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(683, 139)
+
+[node name="Block11" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(88, 168)
+
+[node name="Block12" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(154, 168)
+
+[node name="Block13" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(220, 168)
+
+[node name="Block14" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(286, 168)
+
+[node name="Block15" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(353, 168)
+
+[node name="Block16" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(419, 168)
+
+[node name="Block17" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(485, 168)
+
+[node name="Block18" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(551, 168)
+
+[node name="Block19" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(617, 168)
+
+[node name="Block20" parent="Blocks" instance=ExtResource("4_3imka")]
+position = Vector2(683, 168)
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="Wall-LC" parent="Walls" instance=ExtResource("3_eq5iv")]
+position = Vector2(32, 114)
+
+[node name="Wall-RC" parent="Walls" instance=ExtResource("5_3qeig")]
+position = Vector2(736, 115)
+
+[node name="Wall-UP" parent="Walls" instance=ExtResource("6_nfp2q")]
+position = Vector2(96, 94)
+
+[node name="Wall-UP2" parent="Walls" instance=ExtResource("6_nfp2q")]
+position = Vector2(160, 94)
+
+[node name="Wall-UP4" parent="Walls" instance=ExtResource("6_nfp2q")]
+position = Vector2(288, 94)
+
+[node name="Wall-UP5" parent="Walls" instance=ExtResource("6_nfp2q")]
+position = Vector2(352, 94)
+
+[node name="Wall-UP3" parent="Walls" instance=ExtResource("6_nfp2q")]
+position = Vector2(224, 94)
+
+[node name="Wall-UP6" parent="Walls" instance=ExtResource("6_nfp2q")]
+position = Vector2(416, 94)
+
+[node name="Wall-UP7" parent="Walls" instance=ExtResource("6_nfp2q")]
+position = Vector2(480, 94)
+
+[node name="Wall-UP8" parent="Walls" instance=ExtResource("6_nfp2q")]
+position = Vector2(544, 94)
+
+[node name="Wall-UP9" parent="Walls" instance=ExtResource("6_nfp2q")]
+position = Vector2(608, 94)
+
+[node name="Wall-L" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 177)
+
+[node name="Wall-L2" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 241)
+
+[node name="Wall-L3" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 305)
+
+[node name="Wall-L4" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 369)
+
+[node name="Wall-L5" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 433)
+
+[node name="Wall-UP10" parent="Walls" instance=ExtResource("6_nfp2q")]
+position = Vector2(672, 94)
+
+[node name="Wall-L6" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 497)
+
+[node name="Wall-L7" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 561)
+
+[node name="Wall-L8" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 625)
+
+[node name="Wall-L9" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 689)
+
+[node name="Wall-L10" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 753)
+
+[node name="Wall-L11" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 817)
+
+[node name="Wall-L12" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 881)
+
+[node name="Wall-L13" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 945)
+
+[node name="Wall-L14" parent="Walls" instance=ExtResource("7_ky8sy")]
+position = Vector2(12, 1009)
+
+[node name="Wall-R" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 179)
+
+[node name="Wall-R2" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 243)
+
+[node name="Wall-R3" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 307)
+
+[node name="Wall-R4" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 371)
+
+[node name="Wall-R5" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 435)
+
+[node name="Wall-R6" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 499)
+
+[node name="Wall-R7" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 563)
+
+[node name="Wall-R8" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 627)
+
+[node name="Wall-R9" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 691)
+
+[node name="Wall-R10" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 755)
+
+[node name="Wall-R11" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 819)
+
+[node name="Wall-R12" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 883)
+
+[node name="Wall-R13" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 947)
+
+[node name="Wall-R14" parent="Walls" instance=ExtResource("8_qyyv2")]
+position = Vector2(756, 1011)
+
+[node name="HUD" parent="." instance=ExtResource("9_tajqb")]
+
+[node name="GameManager" parent="." instance=ExtResource("11_k8kaw")]

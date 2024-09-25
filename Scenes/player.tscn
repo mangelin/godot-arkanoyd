@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://brkcvt6j2nf01"]
+
+[ext_resource type="Texture2D" uid="uid://dc8gv267hphuj" path="res://assets/players/plr-space.png" id="1_olthy"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_ww02n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kw4o4"]
+size = Vector2(116, 12)
+
+[node name="Player" type="Area2D"]
+position = Vector2(367, 921)
+script = ExtResource("1_ww02n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_olthy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 21)
+shape = SubResource("RectangleShape2D_kw4o4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="child_entered_tree" from="CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]

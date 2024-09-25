@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfuxkblvuo0q6"]
+
+[ext_resource type="Texture2D" uid="uid://bywbl20vassnp" path="res://assets/players/bll-normal.png" id="1_i8pvd"]
+[ext_resource type="AudioStream" uid="uid://ih46kpe5i244" path="res://assets/sfx/bounce-ball.mp3" id="2_1tqh8"]
+
+[sub_resource type="GDScript" id="GDScript_v4m7y"]
+script/source = "extends CharacterBody2D
+
+class_name Ball
+
+@export var speed: int = 1
+@export var direction: Vector2 = Vector2(0, 1)
+@export var velocity_x: int = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+func play_bounce_sound():
+	$Bounce.play()
+		
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	var velocity = Vector2.ZERO
+	velocity.y += 1 * direction.y
+	velocity.x += 1 * direction.x
+	if velocity.length() > 0:
+		velocity = velocity.normalized() * speed
+		
+		
+	position += velocity * delta
+	move_and_slide()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_un8g5"]
+radius = 6.0
+
+[node name="Ball" type="CharacterBody2D"]
+z_index = 1
+script = SubResource("GDScript_v4m7y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_i8pvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_un8g5")
+
+[node name="Bounce" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_1tqh8")
+volume_db = 4.0
+pitch_scale = 2.0

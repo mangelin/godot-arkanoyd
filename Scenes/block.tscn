@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdqalx7xgv4p5"]
+
+[ext_resource type="Script" path="res://scripts/block.gd" id="1_4hyqy"]
+[ext_resource type="Texture2D" uid="uid://dlj1t0y52tcm7" path="res://assets/blocks/blk-green.png" id="1_ulh8e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxx3y"]
+size = Vector2(58, 25)
+
+[node name="Block" type="Area2D"]
+script = ExtResource("1_4hyqy")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_ulh8e")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_oxx3y")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
