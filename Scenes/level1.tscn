@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://brkcvt6j2nf01" path="res://Scenes/player.tscn" id="1_4nmui"]
 [ext_resource type="Texture2D" uid="uid://bcidqa7ee8w30" path="res://assets/textures/black-64x64.png" id="1_36hdj"]
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_csbwa"]
 [ext_resource type="PackedScene" uid="uid://cfuxkblvuo0q6" path="res://Scenes/ball.tscn" id="2_5vbkp"]
 [ext_resource type="PackedScene" uid="uid://jwgwoingy1r5" path="res://Scenes/left_corner.tscn" id="3_eq5iv"]
-[ext_resource type="PackedScene" uid="uid://bdqalx7xgv4p5" path="res://Scenes/block.tscn" id="4_3imka"]
 [ext_resource type="PackedScene" uid="uid://cbd02u7b8d6y2" path="res://Scenes/wall_rc.tscn" id="5_3qeig"]
 [ext_resource type="PackedScene" uid="uid://d2odcl2rcm74g" path="res://Scenes/wall_up.tscn" id="6_nfp2q"]
 [ext_resource type="PackedScene" uid="uid://dvuav6jsuqfg7" path="res://Scenes/wall_l.tscn" id="7_ky8sy"]
@@ -14,6 +14,8 @@
 
 [node name="Level1" type="Node2D"]
 position = Vector2(0, 82)
+script = ExtResource("1_csbwa")
+start_position = Vector2(88, 60)
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -29,128 +31,6 @@ position = Vector2(401, 866)
 [node name="Ball" parent="." instance=ExtResource("2_5vbkp")]
 position = Vector2(408, 394)
 speed = 250
-
-[node name="Blocks" type="Node" parent="."]
-
-[node name="Block" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(88, 139)
-energy = null
-has_key = null
-points = null
-
-[node name="Block2" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(154, 139)
-energy = null
-has_key = null
-points = null
-
-[node name="Block3" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(220, 139)
-energy = null
-has_key = null
-points = null
-
-[node name="Block4" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(286, 139)
-energy = null
-has_key = null
-points = null
-
-[node name="Block5" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(353, 139)
-energy = null
-has_key = null
-points = null
-
-[node name="Block6" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(419, 139)
-energy = null
-has_key = null
-points = null
-
-[node name="Block7" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(485, 139)
-energy = null
-has_key = null
-points = null
-
-[node name="Block8" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(551, 139)
-energy = null
-has_key = null
-points = null
-
-[node name="Block9" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(617, 139)
-energy = null
-has_key = null
-points = null
-
-[node name="Block10" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(683, 139)
-energy = null
-has_key = null
-points = null
-
-[node name="Block11" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(88, 168)
-energy = null
-has_key = null
-points = null
-
-[node name="Block12" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(154, 168)
-energy = null
-has_key = null
-points = null
-
-[node name="Block13" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(220, 168)
-energy = null
-has_key = null
-points = null
-
-[node name="Block14" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(286, 168)
-energy = null
-has_key = null
-points = null
-
-[node name="Block15" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(353, 168)
-energy = null
-has_key = null
-points = null
-
-[node name="Block16" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(419, 168)
-energy = null
-has_key = null
-points = null
-
-[node name="Block17" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(485, 168)
-energy = null
-has_key = null
-points = null
-
-[node name="Block18" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(551, 168)
-energy = null
-has_key = null
-points = null
-
-[node name="Block19" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(617, 168)
-energy = null
-has_key = null
-points = null
-
-[node name="Block20" parent="Blocks" instance=ExtResource("4_3imka")]
-position = Vector2(683, 168)
-energy = null
-has_key = null
-points = null
 
 [node name="Walls" type="Node" parent="."]
 
